@@ -1,6 +1,2 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
- - rbx-3
-   
+language: java
+script: ant run
