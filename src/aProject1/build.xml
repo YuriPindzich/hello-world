@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+-<project default="run">
+
+
++<target name="clean">
+
+
+-<target name="compile" depends="clean">
+
+<mkdir dir="build/classes"/>
+
+
+-<javac destdir="build/classes" srcdir="src" sourcepath="D:\работа\own\eclipse\Travis">
+
+<include name="**/*.java"/>
+
+</javac>
+
+</target>
+
+
+-<target name="jar" depends="compile">
+
+<mkdir dir="build/jar"/>
+
+
+-<jar basedir="build/classes" destfile="build/jar/helloworld.jar">
+
+
+-<manifest>
+
+<attribute name="Main-Class" value="data.helloworld"/>
+
+</manifest>
+
+</jar>
+
+</target>
+
+
+-<target name="run" depends="jar">
+
+<java fork="true" jar="build/jar/helloworld.jar"/>
+
+</target>
+
+</project>
